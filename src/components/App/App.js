@@ -34,11 +34,12 @@ const App = () => {
         dispatch(receiveAccessTokenError(JSON.stringify(err)));
       });
   }, []);
+
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <ArtistRoute />
+          <ArtistRoute artistID={DEFAULT_ARTIST_ID} />
         </Route>
       </Switch>
       <GlobalStyles />
